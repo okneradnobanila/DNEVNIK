@@ -1,0 +1,15 @@
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\bin\Debug\Wpf_Dnevnik.exe.config
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\bin\Debug\Wpf_Dnevnik.exe
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\bin\Debug\Wpf_Dnevnik.pdb
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik.csprojAssemblyReference.cache
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\MainWindow.g.cs
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\App.g.cs
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik_MarkupCompile.cache
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik_MarkupCompile.lref
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\MainWindow.baml
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik.g.resources
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik.Properties.Resources.resources
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik.csproj.GenerateResource.cache
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik.exe
+C:\Users\acer\source\repos\Wpf_Dnevnik\Wpf_Dnevnik\obj\Debug\Wpf_Dnevnik.pdb
