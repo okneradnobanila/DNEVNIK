@@ -86,6 +86,7 @@ namespace Wpf_Dnevnik
             int number = command.ExecuteNonQuery(); // считаем количество изменений
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number); // выводим сообщением об успешном изменении
 
+            old_id.Clear(); new_id.Clear();
         }
 
         private void Change_fio_Click(object sender, RoutedEventArgs e) // Изменение ФИО
@@ -103,6 +104,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number);
+
+            old_fio.Clear(); new_fio.Clear();
         }
 
         private void Change_group_Click(object sender, RoutedEventArgs e) // Изменение группы
@@ -120,6 +123,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number);
+
+            old_group.Clear(); new_group.Clear();
         }
 
         private void Change_data_roz_Click(object sender, RoutedEventArgs e) // Изменение даты рождения
@@ -137,6 +142,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number);
+
+            old_data_roz.Clear(); new_data_roz.Clear();
         }
 
         private void Change_id2_Click(object sender, RoutedEventArgs e) // Изменение айди во второй таблице
@@ -154,6 +161,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number);
+
+            old_id2.Clear(); new_id2.Clear();
         }
 
         private void Change_data_Click(object sender, RoutedEventArgs e) // Изменение даты оценки
@@ -171,6 +180,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number);
+
+            old_data.Clear(); new_data.Clear();
         }
 
         private void Change_zadanie_Click(object sender, RoutedEventArgs e) // Изменение задания/темы за которую получена оценку
@@ -188,6 +199,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number);
+
+            old_zadanie.Clear(); new_zadanie.Clear();
         }
 
         private void Change_ocenka_Click(object sender, RoutedEventArgs e) // Изменение оценки
@@ -205,27 +218,13 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nОбновлено объектов: " + number);
-        }
 
-        private void Delete_id_Click(object sender, RoutedEventArgs e) // Удаление по айди
-        {
-            string id = udalit_id.Text; //Удалить по имени  
-
-            string ssql = $"DELETE  FROM Student  WHERE id = '{id}'"; //ЗАпрос удалить поле 
-
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dnevnik;Integrated Security=True"; 
-            SqlConnection conn = new SqlConnection(connectionString); // Подключение к БД
-            conn.Open();// Открытие Соединения
-
-            SqlCommand command = new SqlCommand(ssql, conn);// Объект вывода запросов
-
-            int number = command.ExecuteNonQuery();
-            MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
+            old_ocenka.Clear(); new_ocenka.Clear();
         }
 
         private void Delete_fio_Click(object sender, RoutedEventArgs e) // Удаление по ФИО
         {
-            string fio = udalit_fio.Text; //Удалить по имени  
+            string fio = udalit_fio.Text; 
 
             string ssql = $"DELETE  FROM Student  WHERE name = '{fio}'"; //ЗАпрос удалить поле 
 
@@ -237,43 +236,13 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
-        }
 
-        private void Delete_group_Click(object sender, RoutedEventArgs e) // Удаление по группе
-        {
-            string group = udalit_group.Text; //Удалить по имени  
-
-            string ssql = $"DELETE  FROM Student  WHERE groupp = '{group}'"; //ЗАпрос удалить поле 
-
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dnevnik;Integrated Security=True"; 
-            SqlConnection conn = new SqlConnection(connectionString); // Подключение к БД
-            conn.Open();// Открытие Соединения
-
-            SqlCommand command = new SqlCommand(ssql, conn);// Объект вывода запросов
-
-            int number = command.ExecuteNonQuery();
-            MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
-        }
-
-        private void Delete_data_roz_Click(object sender, RoutedEventArgs e) // Удаление по дате рождения
-        {
-            string datar = udalit_data_roz.Text; //Удалить по имени  
-
-            string ssql = $"DELETE  FROM Student  WHERE data = '{datar}'"; //ЗАпрос удалить поле
-
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dnevnik;Integrated Security=True"; 
-            SqlConnection conn = new SqlConnection(connectionString); // Подключение к БД
-            conn.Open();// Открытие Соединения
-
-            SqlCommand command = new SqlCommand(ssql, conn);// Объект вывода запросов
-
-            int number = command.ExecuteNonQuery();
-            MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
+            udalit_fio.Clear();
         }
 
         private void Delete_id2_Click(object sender, RoutedEventArgs e) // Удаление по айди во второй таблице
         {
-            string id2 = udalit_id2.Text; //Удалить по имени  
+            string id2 = udalit_id2.Text; 
 
             string ssql = $"DELETE  FROM Dnevnik  WHERE id = '{id2}'"; //ЗАпрос удалить поле 
 
@@ -285,54 +254,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
-        }
 
-        private void Delete_data_Click(object sender, RoutedEventArgs e) // Удаление по дате выставления оценки
-        {
-            string data = udalit_data.Text; //Удалить по имени  
-
-            string ssql = $"DELETE  FROM Dnevnik  WHERE data = '{data}'"; //ЗАпрос удалить поле 
-
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dnevnik;Integrated Security=True"; 
-            SqlConnection conn = new SqlConnection(connectionString); // Подключение к БД
-            conn.Open();// Открытие Соединения
-
-            SqlCommand command = new SqlCommand(ssql, conn);// Объект вывода запросов
-
-            int number = command.ExecuteNonQuery();
-            MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
-        }
-
-        private void Delete_zadanie_Click(object sender, RoutedEventArgs e) // Удаление по заданию
-        {
-            string zadanie = udalit_zadanie.Text; //Удалить по имени  
-
-            string ssql = $"DELETE  FROM Dnevnik  WHERE zadanie = '{zadanie}'"; //ЗАпрос удалить поле 
-
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dnevnik;Integrated Security=True"; 
-            SqlConnection conn = new SqlConnection(connectionString); // Подключение к БД
-            conn.Open();// Открытие Соединения
-
-            SqlCommand command = new SqlCommand(ssql, conn);// Объект вывода запросов
-
-            int number = command.ExecuteNonQuery();
-            MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
-        }
-
-        private void Delete_ocenka_Click(object sender, RoutedEventArgs e) // Удаление по оценке
-        {
-            string ocenka = udalit_ocenka.Text; //Удалить по имени  
-
-            string ssql = $"DELETE  FROM Dnevnik  WHERE ocenka = '{ocenka}'"; //ЗАпрос удалить поле 
-
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dnevnik;Integrated Security=True"; 
-            SqlConnection conn = new SqlConnection(connectionString); // Подключение к БД
-            conn.Open();// Открытие Соединения
-
-            SqlCommand command = new SqlCommand(ssql, conn);// Объект вывода запросов
-
-            int number = command.ExecuteNonQuery();
-            MessageBox.Show("Изменения сохранены!\nУдалено объектов: " + number);
+            udalit_id2.Clear();
         }
 
         private void Add_student_Click(object sender, RoutedEventArgs e) // Добавление нового студента
@@ -352,6 +275,8 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nВставлено объектов: " + number);
+
+            noviy_id.Clear(); noviy_fio.Clear(); noviy_group.Clear(); noviy_data_roz.Clear();
         }
 
         private void Add_ocenka_Click(object sender, RoutedEventArgs e) // Добавление новой оценки
@@ -371,6 +296,48 @@ namespace Wpf_Dnevnik
 
             int number = command.ExecuteNonQuery();
             MessageBox.Show("Изменения сохранены!\nВставлено объектов: " + number);
+
+            noviy_id2.Clear(); noviy_data.Clear(); noviy_zadanie.Clear(); noviy_ocenka.Clear();
+        }
+
+        private void Obnovit_tablici_Click(object sender, RoutedEventArgs e) // Обновить данные в textbox'ах
+        {
+            Id_textbox.Clear(); Fio_textbox.Clear(); Group_textbox.Clear(); Data_roz_textbox.Clear();
+            Id2_textbox.Clear(); Data_textbox.Clear(); Zadanie_textbox.Clear(); Ocenka_textbox.Clear();
+
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=dnevnik;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(connectionString); // Подключение к БД
+            conn.Open();// Открытие Соединения
+
+            string ssql1 = $"SELECT TOP (1000) [name],[groupp],[data],[id] FROM [dnevnik].[dbo].[Student]"; //Зaпрос таблицы Student
+
+            SqlCommand command = new SqlCommand(ssql1, conn);// Объект вывода запросов
+            SqlDataReader reader = command.ExecuteReader(); // Выполнение запроса вывод информации
+
+            while (reader.Read()) //В цикле вывести всю информацию из таблици
+            {
+
+                Id_textbox.Text += (reader[3].ToString() + "\n");
+                Fio_textbox.Text += (reader[0].ToString() + "\n");
+                Group_textbox.Text += (reader[1].ToString() + "\n");
+                Data_roz_textbox.Text += (reader[2].ToString() + "\n");
+
+            }
+            reader.Close(); // Закрываем "чтение" первой таблицы
+
+            string sql2 = $"SELECT TOP (1000) [id],[data],[zadanie],[ocenka]FROM[dnevnik].[dbo].[Dnevnik]"; // Запрос таблицы Dnevnik
+            SqlCommand command2 = new SqlCommand(sql2, conn);
+            SqlDataReader reader2 = command2.ExecuteReader();
+
+            while (reader2.Read())
+            {
+                Id2_textbox.Text += (reader2[0].ToString() + "\n");
+                Data_textbox.Text += (reader2[1].ToString() + "\n");
+                Zadanie_textbox.Text += (reader2[2].ToString() + "\n");
+                Ocenka_textbox.Text += (reader2[3].ToString() + "\n");
+            }
+
+            reader2.Close(); // Закрываем чтение второй таблицы
         }
     }
 }
